@@ -15,7 +15,8 @@ package [
 	'sudo',
 	'python-pip',
 	'python3-pip',
-	'bundler'
+	'bundler',
+	'xclip'
 ]
 
 package 'google-chrome-unstable' do
