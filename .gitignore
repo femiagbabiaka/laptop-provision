@@ -1,0 +1,3 @@
+chef-*.out
+chef-*.pid
+local-mode-cache/
