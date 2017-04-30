@@ -16,12 +16,22 @@ package [
 	'python-pip',
 	'python3-pip',
 	'bundler',
-	'xclip'
+	'xclip',
+	'gconf2',
+	'apt-transport-https'
 ]
 
 package 'google-chrome-unstable' do
 	action :install
 	options '--allow-unauthenticated'
+end
+
+cookbook_file '/tmp/slack-desktop-2.5.2-amd64.deb' do
+	source 'slack-desktop-2.5.2-amd64.deb'
+end
+
+dpkg_package 'slack-desktop' do
+	source '/tmp/slack-desktop-2.5.2-amd64.deb'
 end
 
 include_recipe 'base::neovim'
